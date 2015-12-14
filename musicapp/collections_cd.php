@@ -1,7 +1,7 @@
 <?php include "header.php";?>  
 <div class="search">
-			<form method="get" action="">
-		        <input type="text" name="q">
+			<form method="POST" name="search_form" onsubmit="return submitSearch();">
+		        <input type="text" id="search_input" required>
 				<input type="submit" value="Szukaj">
 			</form>
 
@@ -15,7 +15,7 @@
 			if($result=mysql_query($sql)){
 				while($row = mysql_fetch_array($result)){
 					echo "<figure  class=\"cap-bot\" >";
-					echo "<a href=\"open_cd.php\"><img src=\"images/covers/cover_".$row[0].".jpg\" class=\"image\" id=".$row[0]."></a>";
+					echo "<a href=open_cd.php?id_image=".$row[0]."><img src=\"images/covers/cover_".$row[0].".jpg\" class=\"image\" id=".$row[0]."></a>";
 					echo "<figcaption >".$row[1]."</br>".$row[2]."</figcaption>";
 					echo "</figure>";		
 					}

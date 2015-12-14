@@ -15,18 +15,23 @@ $id_max_last=$id_max+1;
 $title_cd=$_POST['title_cd'];
 $band_cd=$_POST['band_cd'];
 $select_genre_id=$_POST['select_genre_id'];
+$describe_cd=$_POST['describe_cd'];
 
 //dodawanie zespołu
 $sql_band="SELECT name FROM band WHERE name='$band_cd'";
 $row=mysql_query($sql_band);
 if(mysql_num_rows($row)==0){
-	$sql_band_add=mysql_query("INSERT INTO band(name) VALUES ('$band_cd')");
+$sql_band_add=mysql_query("INSERT INTO band(name) VALUES ('$band_cd')");
 }
 //dodawanie danych o albumie
-$sql_album_add=mysql_query("INSERT INTO album(title,rok,rate,cover,status,id_genre) VALUES('$title_cd','NOW()','0','$id_max_last','1','$select_genre_id')");
+echo $title_cd."</br>";
+echo $band_cd."</br>";
+echo $select_genre_id."</br>";
+echo $describe_cd."</br>";
+
+$sql_album_add=mysql_query("INSERT INTO album(title,describe_cd,rok,rate,cover,status,id_genre) VALUES('$title_cd','$describe_cd','CURRENT_DATE()','0','$id_max_last','1','$select_genre_id')");
 
 //dodawanie album_band
-
 $sql_id_band = mysql_query("SELECT id_band FROM band WHERE name='$band_cd'");
 $row_id_band = mysql_fetch_array($sql_id_band);
 $sql_id_album= mysql_query("SELECT id_album FROM album WHERE title='$title_cd'");
@@ -35,5 +40,5 @@ $row_id_album = mysql_fetch_array($sql_id_album);
 $sql_album_band_add=mysql_query("INSERT INTO album_band(id_album,id_band) VALUES('$row_id_album[0]','$row_id_band[0]')");
 if($sql_album_add === FALSE) { 
     die(mysql_error()); 
-
+}
 ?>

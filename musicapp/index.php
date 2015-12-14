@@ -1,17 +1,20 @@
 <?php include "header.php";?>  
  
+
+ 
+ 
 		<div class="column1">
 			<div class="titleLastAdd">
-				Ostatnio dodane płyty   
+				<i6>OSTATNIO DODANE PŁYTY</i6>
 			</div>
 			<?php
 		
 			$sql = "SELECT al.cover, al.title, ba.name FROM album al, band ba, album_band ab 
-					WHERE al.id_album=ab.id_album AND ab.id_band=ba.id_band";
+					WHERE al.id_album=ab.id_album AND ab.id_band=ba.id_band order by rok desc limit 15";
 			if($result=mysql_query($sql)){
 				while($row = mysql_fetch_array($result)){
 					echo "<figure  class=\"cap-bot\" >";
-					echo "<img src=\"images/covers/cover_".$row[0].".jpg\" class=\"image\" id=".$row[0]."></a>";
+					echo "<a href=open_cd.php?id_image=".$row[0]."><img src=\"images/covers/cover_".$row[0].".jpg\" class=\"image\" id=".$row[0]."></a>";
 					echo "<figcaption >".$row[1]."</br>".$row[2]."</figcaption>";
 					echo "</figure>";		
 					}
@@ -21,7 +24,7 @@
 	 
 	    <div class="column2">
 		   <div class="titleTop">
-				Najwyżej oceniane płyty   
+				<i6>NAJWYŻEJ OCENIANE PŁYTY</i6>
 				</div><center>
 				<?php 
 		
@@ -31,7 +34,7 @@
 				if($result=mysql_query($sql)){
 					while($row = mysql_fetch_array($result)){
 					echo "<figure class=\"cap-bot2\">";
-					echo "<img  src=\"images/covers/cover_".$row[0].".jpg\" class=\"imageTop\" id=".$row[0]."></a>";
+					echo "<a href=open_cd.php?id_image=".$row[0]."><img  src=\"images/covers/cover_".$row[0].".jpg\" class=\"imageTop\" id=".$row[0]."></a>";
 					echo"<figcaption>".$row[1]."</br>".$row[2]."</figcaption>";
 					echo "</figure>";				
 					}

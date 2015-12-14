@@ -1,0 +1,155 @@
+
+.imageOpen{
+width:350px;
+height:350px;
+border:15px solid #F6F6F6;
+}
+
+.column_left_open{
+float:left;
+width:50%;
+height:100%;
+padding:0px 0px 0px 0px;
+border-style:solid;
+border-width:0px;	
+border-color:#D6D6C2;
+margin-left:40px;
+margin-top:30px;
+
+}
+
+.column_right_open{
+float:right;
+width:45%;
+height:auto;
+padding:0px 0px 0px 0px;
+border-style:solid;
+border-width:0px;	
+border-color:#D6D6C2;
+margin-top:30px;
+margin-right:0px;
+text-align:center;
+
+}
+
+.list_track{
+width:auto;
+height:auto;
+margin-top:50px;
+margin-left:50px;
+border-width:5px;	
+border-color:#D6D6C2;
+-webkit-box-shadow:inset 0px 0px 0px 0px #D6D6C2;
+-moz-box-shadow:inset 0px 0px 0px 0px #D6D6C2;
+ box-shadow:inset 0px 0px 0px 0px #D6D6C2;
+}
+
+#add_track{
+display:none;
+width:auto;
+height:200px;
+margin-top:70px;
+border-width:5px;	
+border-color:#D6D6C2;
+text-align:center;
+}
+
+.input_add_track{
+margin: 0 0 0 40px;
+}
+
+.ui360,
+.sm2-360ui {
+ width:300px;
+ height:10px;
+}
+
+#hide{
+	display:none;
+}
+
+.describe_cd_disp{
+font-size:13px;
+text-align:justify;	
+}
+
+.category_title{
+text-transform:uppercase;
+height:23px;
+width:200px;
+text-align:right;
+line-height: 20px;
+font-size:16px;
+color: #fff;
+background-color:#27a387;
+border-bottom-right-radius:1000px;
+border-top-right-radius:1000px;
+padding:13px 35px 6px 15px;
+}
+
+.title_cd_disp{
+margin-top:50px;
+color:#27a387;
+font-size:25px;
+text-align:center;
+
+}
+
+.band_cd_disp{
+margin-top:18px;
+margin-bottom:30px;
+color:#FFF;	
+font-size:17px;
+text-align:center;
+background-color:#FC7649;
+border-bottom-right-radius:10px;
+border-top-right-radius:10px;
+border-bottom-left-radius:10px;
+border-top-left-radius:10px;
+}
+
+.comments{
+text-align:center;
+margin-top:20px;
+margin-left:75px;
+width:390px;
+
+}
+
+#comment{
+width:390px;
+height:70px;
+resize: none;
+border-radius:10px;
+margin-top:10px;
+opacity:0.7;
+
+}
+
+#btn_comment{
+float:right;
+background:#FC7649;
+}
+
+
+.comments_show{
+width:390px;
+margin-top:40px;
+text-align:center;
+margin-left:75px;
+}
+
+.name_user{
+text-align:left;
+margin-left:10px;
+}
+.comment_user{
+text-align:left;
+background:white;
+border-radius:10px;
+margin-bottom:10px;
+opacity:0.8;
+padding:10px;
+border:1px solid #AAAAAA; 
+
+}

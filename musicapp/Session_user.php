@@ -1,3 +1,4 @@
+
 <?php
 	class Session_user{
 
@@ -26,11 +27,15 @@
 
 		//czy uzytkownik jest zalogowany
 			public static function isLogged(){
-					if(isset($_SESSION['logged'])){
 				
-						return $_SESSION['logged'];
-					}
+				if(isset($_SESSION['logged']) && $_SESSION['logged']){
+						
+						return true;
+						//header("location:index.php");
+				}else{
+				
 					return false;
+				}
 			}
 		
 		
@@ -42,23 +47,25 @@
 		
 		if($result = mysql_query($query)){
 			if(mysql_fetch_array($result)[0]!=1){
-				$_SESSION['logged'] = false;
+			$_SESSION['logged'] = false;
+				
 				
 				return false;
 			}
-			else 
+			else{
+			
 			$_SESSION['logged'] = true;
 			$_SESSION['login']=$login;
 			return true;
 			}						
 		}
-		
+		}
 				
 		
 		//wylogowanie
 		public static function logout(){
 			$_SESSION['logged'] = false;
-					
+					header("location:index.php");
 		}
 
 	};

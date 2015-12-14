@@ -1,0 +1,61 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);
+
+body {color: #666;}
+
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+
+}
+
+.popupContainer{
+	position:absolute;
+	width:380px;
+	height: auto;
+	left:45%;
+	top:80px;
+	background: #FFF;
+	
+}
+
+#modal_trigger {}
+
+.btn_pop_up {padding:10px 40px; background: #FF6633; text-align: center; width:90px; font-size:12px;}
+.btn_red {background: #FFF; color: #FFF; text-align: center;}
+
+.btn_pop_up:hover {background: #27a387;}
+.btn_red:hover {background: #C12B05;}
+
+a.btn_pop_up {color:#666; text-align: center; text-decoration: none; }
+a.btn_red {color: #FFF;}
+
+.one_half {width:50%; display: block; float:left;}
+.one_half.last {width:100%; text-align: center;}
+
+/* Popup Styles*/
+.popupHeader {font-size:16px; text-transform: uppercase;}
+.popupHeader {background:#27a387; color:#FFF; position:relative; padding:10px 20px; border-bottom:1px solid #DDD; font-weight:bold;}
+.popupHeader .modal_close {position: absolute; right: 0; top:0; padding:10px 15px; background:#27a387; cursor: pointer; color:#FFF; font-size:16px;}
+
+.popupBody {padding:20px;}
+
+
+/* Social Login Form */
+.centeredText {text-align: center; margin: 20px 0; clear: both; overflow: hidden; text-transform: uppercase;}
+
+.action_btns {clear:both; overflow: hidden; float:center; }
+.action_btns a {display: block; float:center;}
+
+/* User Login Form */
+.user_login {}
+.user_login label {display: block; margin-bottom:10px;}
+.user_login input[type="text"], .user_login input[type="email"], .user_login input[type="password"] {display: block; width:90%; padding: 10px; border:1px solid #DDD; color:#666;}
+.user_login input[type="submit"]{background:#FF6633; width:150px; border-radius:1px; padding: 10px; margin-top:15px; margin-bottom:10px; font-weight:bold;}
+
+
