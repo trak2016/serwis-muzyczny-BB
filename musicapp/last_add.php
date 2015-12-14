@@ -1,5 +1,5 @@
 <?php
-		
+		//wyświetlanie ostatnio dodanych
 		$sql = "SELECT al.cover, al.title, ba.name FROM album al, band ba, album_band ab WHERE al.id_album=ab.id_album AND ab.id_band=ba.id_band";
 		if($result=mysql_query($sql)){
 			while($row = mysql_fetch_array($result)){

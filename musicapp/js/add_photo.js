@@ -1,3 +1,4 @@
+ //obsługa pokazywania okładki
  function submitForm() {
 			$("body").css('cursor','progress');
             console.log("submit event");
@@ -17,7 +18,7 @@
         }
 		
 
-					
+//obsługa dodawania płyty				
  function submitCd() {
             console.log("submit event");
 						           

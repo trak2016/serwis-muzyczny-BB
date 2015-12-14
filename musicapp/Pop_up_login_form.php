@@ -6,7 +6,7 @@
 		
 		<section class="popupBody">
 		
-
+			<!-- Username & Password register form -->
 			<div class="user_login">
 				<form name="login" action="formLogin.php" method="POST">
 					<label>Login</label>

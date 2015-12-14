@@ -1,3 +1,4 @@
+//obsługa okien logowania i rejestracji
 $(document).ready(function() {
 $("#modal_login_pop_up").leanModal({
 	top : 200, 

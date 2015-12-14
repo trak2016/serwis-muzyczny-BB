@@ -1,3 +1,4 @@
+ //obsługa oceniania płyt
  $(document).ready(function () {
 	$("#star_rate .stars").click(function () {
 		rate=$(this).attr("value");

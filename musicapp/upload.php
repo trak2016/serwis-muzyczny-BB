@@ -1,5 +1,5 @@
 <?php
-
+//upload okładki -> dodaj okładkę
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);

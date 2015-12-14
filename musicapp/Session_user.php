@@ -31,7 +31,7 @@
 				if(isset($_SESSION['logged']) && $_SESSION['logged']){
 						
 						return true;
-						//header("location:index.php");
+						
 				}else{
 				
 					return false;

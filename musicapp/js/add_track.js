@@ -1,4 +1,4 @@
-		
+//obsługa dodawania utworu		
  function submitAddTrack() {
             console.log("submit event");
 			$("body").css('cursor','progress');

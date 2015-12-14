@@ -4,7 +4,7 @@
 $id_genre = $_POST['id_genre'];
 $genre=(string)$id_genre;
 
-
+	//wyświetlanie płyt w zależności od gatunku
 	$sql = "SELECT al.cover, al.title, ba.name FROM album al, band ba, album_band ab, genre ge 
 					WHERE al.id_album=ab.id_album AND ab.id_band=ba.id_band AND al.id_genre=ge.id_genre AND ge.id_genre='$genre'";
 			if($result=mysql_query($sql)){

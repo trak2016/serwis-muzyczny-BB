@@ -1,3 +1,4 @@
+//obsługa wyszukiwania płyt
  function submitSearch() {
 	 
 	 search_cd = $('#search_input').val();	

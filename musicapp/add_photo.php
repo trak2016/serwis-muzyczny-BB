@@ -6,40 +6,36 @@
 	<h4>Dane</h4>
 	<div class="input_size">
 
-	<form enctype="multipart/form-data" action="" id="form_add_cd" method="POST" onsubmit="return submitCd();">
-    <p>Tytuł: <input type="text" id="title_cd" name="title_cd" class="input_add" required></p>
-	<p>Wykonawca:<input type="text" id="band_cd" name="band_cd" class="input_add" required></p>
-     Gatunek:
-	
-	<?php
-	$sql = mysql_query ("SELECT id_genre, genre_name FROM genre;");
-	echo "<select name=\"select_genre_id\" class=\"input_add\" id=\"select_genre\">";
-	while($row = mysql_fetch_assoc($sql)) {
-		echo "<option value=".$row['id_genre'].">".$row['genre_name']."</option>";
-	}
-	echo '</select>';
-	?>
-	<p>Opis: <textarea id="describe_cd" name="describe_cd" class="input_add"  cols="50" rows="4" required></textarea></p>
+		<form enctype="multipart/form-data" action="" id="form_add_cd" method="POST" onsubmit="return submitCd();">
+		<p>Tytuł: <input type="text" id="title_cd" name="title_cd" class="input_add" required></p>
+		<p>Wykonawca:<input type="text" id="band_cd" name="band_cd" class="input_add" required></p>
+		 Gatunek:
+		
+		<?php //formularz dodawania płyty
+		$sql = mysql_query ("SELECT id_genre, genre_name FROM genre;");
+		echo "<select name=\"select_genre_id\" class=\"input_add\" id=\"select_genre\">";
+		while($row = mysql_fetch_assoc($sql)) {
+			echo "<option value=".$row['id_genre'].">".$row['genre_name']."</option>";
+		}
+		echo '</select>';
+		?>
+		<p>Opis: <textarea id="describe_cd" name="describe_cd" class="input_add"  cols="50" rows="4" required></textarea></p>
 	</div>
-	
 	<div class="submit_add_cd_class">
-	<input type="submit" id="submit_add_cd" class="input_add" value="Dodaj płytę" >
-	</form>
-
-
+		<input type="submit" id="submit_add_cd" class="input_add" value="Dodaj płytę" >
+		</form>
 	</div>
 </div>
 
 <div class="column_left_add_cd">
-
-<h4>Wybierz okładkę</h4>
-	<form method="post" id="fileinfo" name="fileinfo" onsubmit="return submitForm();">
-        <label> </label><br>
-        <input type="file" name="file" accept="image/*"/>
-        <input type="submit" value="Wybierz okładkę" />
-	</form>
-	<div class="image_size">
-	</div>
+	<h4>Wybierz okładkę</h4>
+		<form method="post" id="fileinfo" name="fileinfo" onsubmit="return submitForm();">
+			<label> </label><br>
+			<input type="file" name="file" accept="image/*"/>
+			<input type="submit" value="Wybierz okładkę" />
+		</form>
+		<div class="image_size">
+		</div>
 </div>
 <div class="clear">
 </div>

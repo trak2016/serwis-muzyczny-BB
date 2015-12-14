@@ -1,8 +1,5 @@
 <?php include "header.php";?>  
  
-
- 
- 
 		<div class="column1">
 			<div class="titleLastAdd">
 				<i6>OSTATNIO DODANE PŁYTY</i6>

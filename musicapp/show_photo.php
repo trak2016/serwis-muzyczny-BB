@@ -1,6 +1,6 @@
 <?php
 @require_once "Session_user.php";
-$sql_id_img = mysql_query("SELECT MAX(cover) FROM album");
+$sql_id_img = mysql_query("SELECT MAX(cover) FROM album"); //wyświetlenie id ostatniej kładki
 
 if($sql_id_img === FALSE) { 
     die(mysql_error()); 

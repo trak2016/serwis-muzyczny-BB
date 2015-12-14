@@ -3,7 +3,7 @@
 $search_cd = $_POST['search_cd'];
 
 
-
+	//obsługa wyszukiwania po nazwie wykonawcy i tytułu płyty
 	$sql = "SELECT al.cover, al.title, ba.name FROM album al, band ba, album_band ab, genre ge 
 					WHERE al.id_album=ab.id_album AND ab.id_band=ba.id_band AND al.id_genre=ge.id_genre 
 					AND (al.title Like '%$search_cd%' OR ba.name Like '%$search_cd%')";

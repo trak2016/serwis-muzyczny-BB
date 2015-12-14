@@ -1,3 +1,4 @@
+//obsługa podświetlania aktywnych zakładek
  $(function() { 
 
         var path = window.location.pathname;

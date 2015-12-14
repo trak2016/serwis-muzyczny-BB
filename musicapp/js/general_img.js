@@ -1,3 +1,4 @@
+//obsługa wyświetlania płyt po gatunku
 $(document).ready(function() {
   $('.btn').click(function(){
     id_genre = $(this).attr('id');

@@ -63,27 +63,23 @@
 		
 			<?php
 			@require_once "Session_user.php";
-			if(Session_user::isLogged()){
-				
+			if(Session_user::isLogged()){ //jeśli zalogowany
 			?>
-			
 			<ul id="nav">
-			<li class="active"><a  href="index.php"  >STRONA GŁÓWNA</a></li>
-			<li><a  href="collections_cd.php" >KOLEKCJA PŁYT</a></li>
-			<li><a  href="add_photo.php"  >DODAJ PŁYTĘ</a></li>
+				<li class="active"><a  href="index.php"  >STRONA GŁÓWNA</a></li>
+				<li><a  href="collections_cd.php" >KOLEKCJA PŁYT</a></li>
+				<li><a  href="add_photo.php"  >DODAJ PŁYTĘ</a></li>
 			</ul> 
 			
 			<div id="navbar_right">
-			<li><i7><?php echo "Witaj, ".$_SESSION['login']; ?></i7><li>
-			<li><a href="logout_user.php">WYLOGUJ</a><li>
+				<li><i7><?php echo "Witaj, ".$_SESSION['login']; ?></i7><li>
+				<li><a href="logout_user.php">WYLOGUJ</a><li>
 			</div>
 			</ul>
-		<?php
-				
-		}
-		else{
-			
-		?>	
+			<?php
+			}
+			else{
+			?>	
 			<li><a href="index.php" >STRONA GŁÓWNA</a></li>
 	        <li><a href="collections_cd.php">KOLEKCJA PŁYT</a></li>
 			<div id="navbar_right">

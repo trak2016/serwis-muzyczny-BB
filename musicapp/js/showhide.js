@@ -1,3 +1,4 @@
+//chowanie i pokazywanie diva z dodawaniem utworu
 $(document).ready(function () {
 	$('#hide').click(function(e)
 {

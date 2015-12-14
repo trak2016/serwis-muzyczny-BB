@@ -3,7 +3,7 @@
 	include "header_log.php";
 	@require_once "Session_user.php";
 
-	//Obsługa formularza
+	//Obsługa formularza logowania
 	$valid = true;	
 		
 		if($valid){

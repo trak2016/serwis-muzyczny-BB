@@ -1,5 +1,6 @@
 
 <?php
+//obsługa dodawania komentarzy
 @require_once "Session_user.php";
 $comment = $_POST['comment'];
 $id_album = $_POST['id_album'];
